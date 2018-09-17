@@ -1,0 +1,20 @@
+## Get all
+GET _search/
+{
+  "query": {
+    "match_all": {}
+  }
+}
+
+## Get only some clientip
+
+GET _search/
+{
+  "query": {
+    "match": {
+      "clientip": "172.21.60.245"
+    }
+  }
+}
+
+DELETE access-log
