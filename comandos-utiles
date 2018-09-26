@@ -1,0 +1,27 @@
+Esta pusheado en github
+
+# Ingesta de logs
+
+nc localhost 5000 < access_log.2018-08-31
+
+# docker compose
+
+docker-compose up -d --build
+docker-compose logs logstash
+docker-compose stop
+docker-compose rm
+
+# kibana
+
+/kibana/export.json tiene toda la configuracion visual de kibana exportada
+
+# Filebeat
+
+sudo service filebeat start
+
+# Filebeat config
+
+sudo gedit /etc/filebeat/filebeat.yml
+
+paths:
+    - /home/facundo/workspaceELK/logs/*.log
